@@ -10,6 +10,7 @@ data_directory=f'{MODULE_DIR}/data/raw/fp_records_1'
 print(f"Loading JSON records from {data_directory}")
 directories=os.listdir(data_directory)
 for directory in directories:
+    temp = 0
     file_names=os.listdir(f"{data_directory}/{directory}")
     for file_name in file_names:
         article=pd.read_json(f'{data_directory}/{directory}/{file_name}',
@@ -22,6 +23,8 @@ for directory in directories:
         article.replace("\n|[ ]{2,}|<.*?>", "", regex=True, inplace=True)  # removes extra spaces, new lines & html tags
 
         df = df.append(article, sort=True)
+        temp = temp + 1
+        if temp==250: break
 
 df = df.set_index('id')
 df = df.reindex(columns=["class", "category", "section", "entities", "title", "subtitle", "text"])

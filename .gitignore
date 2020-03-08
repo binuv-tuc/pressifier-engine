@@ -1,5 +1,6 @@
 venv
 .idea
-data
+core/data/raw
+core/data/train
 __pycache__
 core/*/__pycache__

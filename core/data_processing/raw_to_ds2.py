@@ -9,7 +9,7 @@ df = pd.DataFrame()
 data_directory = f'{MODULE_DIR}/data/raw/fp_records_2'
 print(f"Loading JSON records from {data_directory}")
 file_names = os.listdir(data_directory)
-# temp_count=1
+temp_count=1
 for file_name in file_names:
     article = pd.read_json(f'{data_directory}/{file_name}',
                          lines=True,
@@ -21,8 +21,8 @@ for file_name in file_names:
     #article['text'] = ''
 
     df = df.append(article, sort=True)
-    # temp_count = temp_count+1
-    # if temp_count==5: break
+    temp_count = temp_count+1
+    if temp_count==500: break
 
 df = df.set_index('id')
 df = df.reindex(columns=["value", "category", "section", "entities", "title", "subtitle", "text"])
