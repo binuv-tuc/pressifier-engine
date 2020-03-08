@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\Cloud\\Bitbucket\\binuv-data-processor\\data\\model\\fp.tfl"
+all_model_checkpoint_paths: "D:\\Cloud\\Bitbucket\\binuv-data-processor\\data\\model\\fp.tfl"
