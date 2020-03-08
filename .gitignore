@@ -1,5 +1,0 @@
-venv
-.idea
-core/data/raw
-__pycache__/
-core/*/__pycache__/
