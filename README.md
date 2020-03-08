@@ -10,3 +10,5 @@ binuv
 
 colab
 https://www.geeksforgeeks.org/how-to-use-google-colab/
+
+gunicorn
