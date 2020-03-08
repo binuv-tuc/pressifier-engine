@@ -5,8 +5,8 @@ from core.classification import client as classifier
 from core.rating import client as rater
 
 
-def index():
-    return 'IT WORKS!'
+def api_index():
+    return 'API WORKS!'
 
 
 def get_articles():
